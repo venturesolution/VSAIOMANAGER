@@ -1,10 +1,10 @@
 #!/bin/bash
 #====================================================
-#	SCRIPT: CONEXAO SSHPLUS MANAGER
+#	SCRIPT: CONEXAO VSAIOSSH MANAGER
 #   DATA ATT:   28 de Set 2020
 #	DESENVOLVIDO POR:	CRAZY_VPN
-#	CONTATO TELEGRAM:	http://t.me/crazy_vpn
-#	CANAL TELEGRAM:	http://t.me/sshplus
+#	CONTATO TELEGRAM:	http://t.me/vsaiossh 
+#	CANAL TELEGRAM:	http://t.me/vsaiossh
 #====================================================
 _lvk=$(wget -qO- sshplus.xyz/script/versao)
 IP=$(wget -qO- sshplus.xyz/meuip.php)
