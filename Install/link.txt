@@ -33,7 +33,7 @@ https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64
 
 https://www.dropbox.com/s/tgkxdwb03r7w59r/badvpn-udpgw
 
-https://raw.githubusercontent.com/venturesolution/VSAIOMANAGER/master/squid
+https://raw.githubusercontent.com/CRAZY-VPN/SQUID3/master/squid3
 
 sshplus.xyz/scripts/utilitarios/syncpainel/inst
 

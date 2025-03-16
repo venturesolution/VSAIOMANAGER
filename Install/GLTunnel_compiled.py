@@ -1,8 +1,9 @@
 #!/usr/bin/env python3				
 
 #--------------------------------------------------				
-# Compiled file by: @VSAIOSSH (VSAIO-MANAGER)				
-# Date of compilation: 16/03/2024 12:41:12				
+# Compiled file by: @DuTra01 (GlEmYsSoN)				
+# Date of compilation: 23/09/2020 21:04:13				
+# File name: GLTunnel_compiled.py
 #--------------------------------------------------
 				
 import marshal				

@@ -1,8 +1,10 @@
 #!/usr/bin/env python3				
 
 #--------------------------------------------------				
-# Compiled file by: @VSAIOSSH (VSAIOSSH)				
-# Date of compilation: 16/03/2024 12:24:02				
+# Compiled file by: @DuTra01 (GlEmYsSoN)				
+# Date of compilation: 16/09/2020 19:23:02				
+# File name: shadow_final.py
+# Script version: 2.0.1
 #--------------------------------------------------
 				
 import marshal				
