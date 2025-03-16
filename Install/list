@@ -6,7 +6,7 @@
 #	CONTATO TELEGRAM:	http://t.me/vsaiossh 
 #	CANAL TELEGRAM:	http://t.me/vsaiossh 
 #====================================================
-_lvk=$(wget -qO- https://raw.githubusercontent.com/venturesolution/VSAIOMANAGER/master/Install/versao)
+_lvk=$(wget -qO- https://raw.githubusercontent.com/venturesolution/VSAIOMANAGER/Install/versao)
 IP=$(wget -qO- sshplus.xyz/meuip.php)
 IP2=$(wget -qO- http://whatismyip.akamai.com/)
 [[ "$IP" != "$IP2" ]] && ipdovps="$IP2" || ipdovps="$IP"
