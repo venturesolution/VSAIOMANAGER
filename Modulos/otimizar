@@ -1,9 +1,9 @@
 #!/bin/bash
 #===================================================
-#	SCRIPT: OTIMIZAR	VSAIOSSH MANAGER
-#	DESENVOLVIDO POR:	VSAIOSSH 
-#	CONTATO TELEGRAM:	http://t.me/vsaiossh 
-#	CANAL TELEGRAM:	http://t.me/vsaiossh 
+#	SCRIPT: OTIMIZAR	SSHPLUS MANAGER
+#	DESENVOLVIDO POR:	CRAZY_VPN
+#	CONTATO TELEGRAM:	http://t.me/crazy_vpn
+#	CANAL TELEGRAM:	http://t.me/sshplus
 #===================================================
 fun_bar() {
 	comando[0]="$1"
