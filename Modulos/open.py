@@ -19,7 +19,7 @@ except:
 PASS = ''
 BUFLEN = 8196 * 8
 TIMEOUT = 60
-MSG = 'ALERT'
+MSG = '@VSAIOSSH'
 DEFAULT_HOST = '0.0.0.0:1194'
 RESPONSE = b"HTTP/1.1 101 " + MSG.encode() + b"\r\n\r\n"
 
