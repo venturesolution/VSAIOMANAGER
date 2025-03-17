@@ -18,7 +18,7 @@ except:
 
 BUFLEN = 4096 * 4
 TIMEOUT = 60
-MSG = '@VSAIOSSH'
+MSG = ''
 COR = '<font color="null">'
 FTAG = '</font>'
 DEFAULT_HOST = "127.0.0.1:22"
