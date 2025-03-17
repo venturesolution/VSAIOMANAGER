@@ -19,15 +19,7 @@ VSAIO Manager :octocat:
 
 :computer: Instalação
 
-apt-get update -y
-apt-get full-upgrade -y
-wget https://raw.githubusercontent.com/venturesolution/VSAIOMANAGER/master/Plus
-chmod +x Plus*
-./Plus
-
-:computer: Instalação em uma Linha
-
-apt-get update -y; apt-get full-upgrade -y; wget https://raw.githubusercontent.com/venturesolution/VSAIOMANAGER/master/Plus; chmod +x Plus* && ./Plus
+apt-get update -y; apt-get full-upgrade -y; bash <(wget -qO- https://raw.githubusercontent.com/venturesolution/VSAIOMANAGER/master/Plus)
 
 :memo: As dependências faltantes serão instaladas automaticamente durante o processo.
 
