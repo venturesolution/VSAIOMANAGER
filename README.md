@@ -2,16 +2,16 @@
 
 Este projeto foi descontinuado e não receberá mais atualizações ou suporte adicional. Embora você possa continuar utilizando o código disponível, recomendamos explorar outras alternativas ativas e atualizadas para gerenciar seus servidores ou VPS.
 
-SSHPLUS MANAGER (Versão Final 1) :octocat:
+VSAIO MANAGER (Versão Final 1) :octocat:
 
-Data da Última Atualização: 09/08/2021
+Data da Última Atualização: 05/03/19999
 
 
 💡 Nota: Se você tiver alguma dúvida ou precisar de ajuda, sugerimos consultar os fóruns comunitários ou procurar outros repositórios no GitHub que ofereçam ferramentas semelhantes.
 
 
 
-SSHPlus Manager :octocat:
+VSAIO Manager :octocat:
 
 :information_source: Descrição
 
@@ -39,7 +39,7 @@ menu
 
 :bookmark_tabs: Notas
 
-SSHPLUS MANAGER oferece as seguintes funcionalidades:
+VSAIO MANAGER oferece as seguintes funcionalidades:
 
 Conexões SSH: Configura e gerencia conexões SSH.
 
@@ -67,50 +67,17 @@ Organização: Facilita o gerenciamento estruturado do servidor e seus serviços
 
 :hammer_and_wrench: Requisitos
 
-Sistema Operacional: Linux (Ubuntu ou Debian)
+Sistema Operacional: Linux (Ubuntu)
 
-Versões Recomendadas: Ubuntu 18.04 Server x86_64 / Ubuntu 20.04 Server x86_64 / Debian 9 Server x86_64
+Versões Recomendadas: Ubuntu 14.04 Server x86_64
 
 Distribuição: É recomendada a utilização de uma distribuição recente ou recém formatada.
 
 Idioma Padrão: Português
 
 
-:books: Utilidades Opcionais
-
-Reinstalar o Script: Execute o comando sshplus no console Ver Imagem
-
-Skin Menu Adaptado Formato ADM: Execute o comando menuV3 no console Ver Imagem
-
-Skin Menu Adaptado: Execute o comando menuV2 no console Ver Imagem
-
-Restaurar o Menu Original: Execute o comando menuV1 no console Ver Imagem
-
-
-:file_folder: Projetos úteis
-
-Gerador de Key SSHPLUS Manager: Ver Repositório
-
-Script Oficial Painel Revenda SSH (Versão 20): Ver Repositório
-
-Multi-Instalador Plus: Ver Repositório
-
-Painel Revenda SSH (Versões): Ver Repositório
-
-Tcp-Tweaker-1.0 (Tcp-Speed): Ver Repositório
-
-
-:inbox_tray: Download do Código Fonte
-
-Código Fonte: Baixar
-
-
-:open_file_folder: Estrutura do Repositório
-
-:email: Contato
-
-:busts_in_silhouette: @vsaiossh: Telegram - Desenvolvedor SSHPlus Manager
+:busts_in_silhouette: @vsaiossh: Telegram - Desenvolvedor VSAIO Manager
 
 🥳
 
-☆ https://t.me/vsaiossh [  ⃘⃤꙰✰ ] ☆
+☆ https://t.me/vsaiossh [•🦅✨‌🌖⃤  ꙰✰] 
