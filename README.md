@@ -75,9 +75,7 @@ Distribuição: É recomendada a utilização de uma distribuição recente ou r
 
 Idioma Padrão: Português
 
-
 :busts_in_silhouette: @vsaiossh: Telegram - Desenvolvedor VSAIO Manager
 
-🥳
 
 ☆ https://t.me/vsaiossh [•🦅✨‌🌖⃤  ꙰✰] 
