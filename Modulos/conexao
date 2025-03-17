@@ -1223,7 +1223,7 @@ exit 0' >$RCLOCAL
 			fi
 			[[ $(grep -wc 'open.py' /etc/autostart) != '0' ]] && pt_proxy=$(grep -w 'open.py' /etc/autostart| cut -d' ' -f6) || pt_proxy=80
 			cat <<-EOF >/etc/openvpn/client-common.txt
-				# OVPN_ACCESS_SERVER_PROFILE=[VSAIOSSH]
+				# OVPN_ACCESS_SERVER_PROFILE=[SSHPLUS]
 				client
 				dev tun
 				proto $PROTOCOL
@@ -1266,9 +1266,9 @@ exit 0' >$RCLOCAL
 		clear
 		echo -e "\E[44;1;37m            GERENCIAR PROXY SOCKS             \E[0m"
 		echo ""
-		[[ $(netstat -nplt | grep -wc 'python') != '0' ]] && {
+		[[ $(netstat -nplt | grep -wc 'python3') != '0' ]] && {
 			sks='\033[1;32mON'
-			echo -e "\033[1;33mPORTAS\033[1;37m: \033[1;32m$(netstat -nplt | grep 'python' | awk {'print $4'} | cut -d: -f2 | xargs)"
+			echo -e "\033[1;33mPORTAS\033[1;37m: \033[1;32m$(netstat -nplt | grep 'python3' | awk {'print $4'} | cut -d: -f2 | xargs)"
 		} || {
 			sks='\033[1;31mOFF'
 		}
@@ -1458,7 +1458,7 @@ exit 0' >$RCLOCAL
 			fi
 		elif [[ "$resposta" = '4' ]]; then
 			if ps x | grep proxy.py | grep -v grep 1>/dev/null 2>/dev/null; then
-				sockspt=$(netstat -nplt | grep 'python' | awk {'print $4'} | cut -d: -f2 | xargs)
+				sockspt=$(netstat -nplt | grep 'python3' | awk {'print $4'} | cut -d: -f2 | xargs)
 				clear
 				echo -e "\E[44;1;37m            PROXY SOCKS             \E[0m"
 				echo ""
@@ -1563,7 +1563,7 @@ exit 0' >$RCLOCAL
 				fun_bar 'fun_msgsocks'
 				restartsocks() {
 					if ps x | grep proxy.py | grep -v grep 1>/dev/null 2>/dev/null; then
-						echo -e "$(netstat -nplt | grep 'python' | awk {'print $4'} | cut -d: -f2 | xargs)" >/tmp/Pt_sks
+						echo -e "$(netstat -nplt | grep 'python3' | awk {'print $4'} | cut -d: -f2 | xargs)" >/tmp/Pt_sks
 						for pidproxy in $(screen -ls | grep ".proxy" | awk {'print $1'}); do
 							screen -r -S "$pidproxy" -X quit
 						done
@@ -1658,7 +1658,7 @@ exit 0' >$RCLOCAL
 				fun_bar 'fun_msgsocks'
 				restartwssocks() {
 					if ps x | grep wsproxy.py | grep -v grep 1>/dev/null 2>/dev/null; then
-						echo -e "$(netstat -nplt | grep 'python' | awk {'print $4'} | cut -d: -f2 | xargs)" >/tmp/Pt_wssks
+						echo -e "$(netstat -nplt | grep 'python3' | awk {'print $4'} | cut -d: -f2 | xargs)" >/tmp/Pt_wssks
 						for pidproxy in $(screen -ls | grep ".ws" | awk {'print $1'}); do
 							screen -r -S "$pidproxy" -X quit
 						done
@@ -1839,8 +1839,8 @@ exit 0' >$RCLOCAL
 				sts5="\033[1;31m○ "
 			}
 
-			[[ "$(netstat -tlpn | grep 'python' | wc -l)" != '0' ]] && {
-				echo -e "\033[1;32mSERVICO: \033[1;33mPROXY SOCKS \033[1;32mPORTA: \033[1;37m$(netstat -nplt | grep 'python' | awk {'print $4'} | cut -d: -f2 | xargs)"
+			[[ "$(netstat -tlpn | grep 'python3' | wc -l)" != '0' ]] && {
+				echo -e "\033[1;32mSERVICO: \033[1;33mPROXY SOCKS \033[1;32mPORTA: \033[1;37m$(netstat -nplt | grep 'python3' | awk {'print $4'} | cut -d: -f2 | xargs)"
 				sts4="\033[1;32m◉ "
 			} || {
 				sts4="\033[1;31m○ "
