@@ -73,6 +73,6 @@ Idioma Padrão: Português
 
 TELEGRAM OFICIAL: @VSAIOSSH
 
---NEM MAIS NEM MENOS APENAS BR 💚💛--
+NEM MAIS NEM MENOS APENAS BR 💚💛
 
---** :octocat: SOU BRASILEIRO 😎🇧🇷 E NÃO DESISTO NUNCA :octocat: **--
+** :octocat: SOU BRASILEIRO 😎🇧🇷 E NÃO DESISTO NUNCA :octocat: **
