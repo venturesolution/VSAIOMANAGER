@@ -14,12 +14,12 @@ function erro {
     exit 1
 }
 
-# Função de loading com 💚💛 em loop
+# Função de loading com 💚💛🇧🇷 em loop
 function loading {
     local PID=$1
-    local INTERVAL=0.2
-    local MAX_SIMBOLOS=18
-    local ICONES=("💚" "💛" "💚" "💛")
+    local INTERVAL=0.1
+    local MAX_SIMBOLOS=9
+    local ICONES=("💚" "💛" "🇧🇷")
     local INDEX=0
     local PROGRESSO=""
 
