@@ -82,5 +82,8 @@ echo -e "\033[32mGateway UDP instalado com sucesso! 🇧🇷\033[0m"
 echo -e "\033[32mSe estiver utilizando o VSAIO MANAGER:\033[0m"
 echo -e "\033[32mDigite menu e ative nas configurações do menu...\033[0m"
 # Removendo arquivos desnecessários
+loading $!
+loading $!
+clear
 rm -rf ~/badvpn
 rm -rf $HOME/vsaiosshudp && cat /dev/null > ~/.bash_history && history -c
