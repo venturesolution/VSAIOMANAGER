@@ -69,10 +69,10 @@ Idioma Padrão: Português
 
 :busts_in_silhouette: @vsaiossh: Telegram - Desenvolvedor VSAIO Manager
 
-
-☆ https://t.me/vsaiossh [•🦅✨‌🌖⃤  ꙰✰] 
+☆ https://t.me/vsaiossh•🦅✨‌🌖⃤  ꙰✰
 
 TELEGRAM OFICIAL: @VSAIOSSH
 
---[NEM MAIS NEM MENOS APENAS BR 💚💛]--
---**[ :octocat: SOU BRASILEIRO 😎🇧🇷 E NÃO DESISTO NUNCA :octocat: ]**--
+--NEM MAIS NEM MENOS APENAS BR 💚💛--
+
+--** :octocat: SOU BRASILEIRO 😎🇧🇷 E NÃO DESISTO NUNCA :octocat: **--
