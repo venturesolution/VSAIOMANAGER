@@ -14,20 +14,30 @@ function erro {
     exit 1
 }
 
-# Função de loading
+# Função de loading com 💚💛 em loop
 function loading {
     local PID=$1
     local INTERVAL=0.2
-    local MAX_BARRAS=6
-    local BARRA=""
-    
+    local MAX_SIMBOLOS=9
+    local ICONES=("💚" "💛")
+    local INDEX=0
+    local PROGRESSO=""
+
     tput civis  # Esconde o cursor
+
     while kill -0 $PID 2>/dev/null; do
-        BARRA+="#"
-        [[ ${#BARRA} -gt $MAX_BARRAS ]] && BARRA="#"
-        echo -ne "\033[32m$BARRA\r\033[0m"
+        PROGRESSO+="${ICONES[INDEX]}"
+        INDEX=$(( (INDEX + 1) % 2 ))  # Alterna entre 💚 e 💛
+
+        if [[ ${#PROGRESSO} -gt $MAX_SIMBOLOS ]]; then
+            PROGRESSO=""
+            echo -ne "\r\033[2K"  # Limpa a linha antes de reiniciar
+        fi
+
+        echo -ne "\033[32m$PROGRESSO\r\033[0m"
         sleep $INTERVAL
     done
+
     tput cnorm  # Restaura o cursor
 }
 
@@ -68,7 +78,8 @@ loading $!
 loading $!
 
 # Mensagem final de sucesso
-echo -e "\033[32mGateway UDP  instalado com sucesso!\033[0m"
+echo -e "\033[32mGateway UDP instalado com sucesso!\033[0m"
+
+# Removendo arquivos desnecessários
 rm -rf ~/badvpn
-#rm - rf $HOME/badvpn && cat /dev/null > ~/.bash_history && history -c
 rm -rf $HOME/vsaiosshudp && cat /dev/null > ~/.bash_history && history -c
