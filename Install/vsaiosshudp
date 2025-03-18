@@ -18,7 +18,7 @@ function erro {
 function loading {
     local PID=$1
     local INTERVAL=0.2
-    local MAX_SIMBOLOS=12
+    local MAX_SIMBOLOS=9
     local ICONES=("💚" "💛")
     local INDEX=0
     local PROGRESSO=""
@@ -57,37 +57,30 @@ function verificar_arquitetura {
 # 1. Atualizando os repositórios e instalando as dependências necessárias.
 (sudo apt update && sudo apt install -y build-essential cmake git) &> /dev/null &
 loading $!
-sleep 9  # Delay extra para parecer mais "engenheirado"
 
 # 2. Verificando a arquitetura do sistema e configurando o repositório apropriado.
 verificar_arquitetura
-sleep 6  # Pequena pausa
 
 # 3. Baixando o código-fonte do BadVPN do repositório adequado.
 (git clone $BADVPN_REPO && cd badvpn) &> /dev/null || erro "Falha ao clonar o repositório BadVPN."
 cd badvpn
-sleep 10  # Simulando um tempo de download maior
 
 # 4. Configurando a compilação para incluir o UDP Gateway.
 (cmake -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_NOTHING_BY_DEFAULT=1 -DBUILD_UDPGW=1 .) &> /dev/null &
 loading $!
-sleep 15  # Tempo de "configuração" adicional
 
 # 5. Compilando o programa.
 (make -j$(nproc)) &> /dev/null &
 loading $!
-sleep 20  # Simulando tempo de compilação maior
 
 # 6. Instalando o binário compilado.
 (sudo make install) &> /dev/null &
 loading $!
-sleep 12  # Instalação "prolongada"
 
 # Mensagem final de sucesso
 echo -e "\033[32mGateway UDP instalado com sucesso! 🇧🇷\033[0m"
 echo -e "\033[32mSe estiver utilizando o VSAIO MANAGER:\033[0m"
 echo -e "\033[32mDigite menu e ative nas configurações do menu...\033[0m"
-
 # Removendo arquivos desnecessários
 rm -rf ~/badvpn
 rm -rf $HOME/vsaiosshudp && cat /dev/null > ~/.bash_history && history -c
