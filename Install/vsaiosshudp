@@ -1,0 +1,74 @@
+#!/bin/bash
+
+# ##########################################################
+# Script de Instalação do BadVPN - UDP Gateway
+# Autor: @fermandoangeli 
+# GitHub: @vsaiossh
+# Telegram: @vsaiossh
+# Cientista de dados e Bacharelado em Tecnologia da Informação pela Universidade de Harvard
+# ##########################################################
+
+# Função para exibir mensagens de erro e sair do script
+function erro {
+    echo -e "\n\033[31mErro:\033[0m $1"
+    exit 1
+}
+
+# Função de loading
+function loading {
+    local PID=$1
+    local INTERVAL=0.2
+    local MAX_BARRAS=6
+    local BARRA=""
+    
+    tput civis  # Esconde o cursor
+    while kill -0 $PID 2>/dev/null; do
+        BARRA+="#"
+        [[ ${#BARRA} -gt $MAX_BARRAS ]] && BARRA="#"
+        echo -ne "\033[32m$BARRA\r\033[0m"
+        sleep $INTERVAL
+    done
+    tput cnorm  # Restaura o cursor
+}
+
+# Função para verificar a arquitetura do sistema
+function verificar_arquitetura {
+    ARCH=$(uname -m)
+    case $ARCH in
+        x86_64|aarch64)
+            BADVPN_REPO="https://github.com/ambrop72/badvpn.git"
+            ;;
+        *)
+            erro "Arquitetura não suportada: $ARCH"
+            ;;
+    esac
+}
+
+# 1. Atualizando os repositórios e instalando as dependências necessárias.
+(sudo apt update && sudo apt install -y build-essential cmake git) &> /dev/null &
+loading $!
+
+# 2. Verificando a arquitetura do sistema e configurando o repositório apropriado.
+verificar_arquitetura
+
+# 3. Baixando o código-fonte do BadVPN do repositório adequado.
+(git clone $BADVPN_REPO && cd badvpn) &> /dev/null || erro "Falha ao clonar o repositório BadVPN."
+cd badvpn
+
+# 4. Configurando a compilação para incluir o UDP Gateway.
+(cmake -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_NOTHING_BY_DEFAULT=1 -DBUILD_UDPGW=1 .) &> /dev/null &
+loading $!
+
+# 5. Compilando o programa.
+(make -j$(nproc)) &> /dev/null &
+loading $!
+
+# 6. Instalando o binário compilado.
+(sudo make install) &> /dev/null &
+loading $!
+
+# Mensagem final de sucesso
+echo -e "\033[32mGateway UDP  instalado com sucesso!\033[0m"
+rm -rf ~/badvpn
+#rm - rf $HOME/badvpn && cat /dev/null > ~/.bash_history && history -c
+rm -rf $HOME/vsaiosshudp && cat /dev/null > ~/.bash_history && history -c
