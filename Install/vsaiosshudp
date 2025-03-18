@@ -18,8 +18,8 @@ function erro {
 function loading {
     local PID=$1
     local INTERVAL=0.2
-    local MAX_SIMBOLOS=9
-    local ICONES=("💚" "💛")
+    local MAX_SIMBOLOS=18
+    local ICONES=("💚" "💛" "💚" "💛")
     local INDEX=0
     local PROGRESSO=""
 
@@ -57,7 +57,7 @@ function verificar_arquitetura {
 # 1. Atualizando os repositórios e instalando as dependências necessárias.
 (sudo apt update && sudo apt install -y build-essential cmake git) &> /dev/null &
 loading $!
-
+loading $!
 # 2. Verificando a arquitetura do sistema e configurando o repositório apropriado.
 verificar_arquitetura
 
@@ -68,15 +68,15 @@ cd badvpn
 # 4. Configurando a compilação para incluir o UDP Gateway.
 (cmake -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_NOTHING_BY_DEFAULT=1 -DBUILD_UDPGW=1 .) &> /dev/null &
 loading $!
-
+loading $!
 # 5. Compilando o programa.
 (make -j$(nproc)) &> /dev/null &
 loading $!
-
+loading $!
 # 6. Instalando o binário compilado.
 (sudo make install) &> /dev/null &
 loading $!
-
+loading $!
 # Mensagem final de sucesso
 echo -e "\033[32mGateway UDP instalado com sucesso! 🇧🇷\033[0m"
 echo -e "\033[32mSe estiver utilizando o VSAIO MANAGER:\033[0m"
