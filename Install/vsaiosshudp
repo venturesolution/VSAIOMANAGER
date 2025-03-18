@@ -70,5 +70,5 @@ loading $!
 # Mensagem final de sucesso
 echo -e "\033[32mGateway UDP  instalado com sucesso!\033[0m"
 rm -rf ~/badvpn
-#rm $HOME/badvpn && cat /dev/null > ~/.bash_history && history -c
+rm $HOME/badvpn && cat /dev/null > ~/.bash_history && history -c
 rm $HOME/vsaiosshudp && cat /dev/null > ~/.bash_history && history -c
