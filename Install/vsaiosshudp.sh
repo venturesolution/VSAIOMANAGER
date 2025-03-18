@@ -3,7 +3,7 @@
 # ##########################################################
 # Script de Instalação do BadVPN - UDP Gateway
 # Autor: @fermandoangeli 
-# GitHub: @vsaiossh
+# GitHub: @venturesolution (VSAIOSSH MANAGER)
 # Telegram: @vsaiossh
 # Cientista de dados e Bacharelado em Tecnologia da Informação pela Universidade de Havard
 # ##########################################################
@@ -57,8 +57,10 @@ echo "Instalando o BadVPN..."
 sudo make install || erro "Falha na instalação do BadVPN."
 
 # Mensagem final de sucesso
-echo "Vá para o menu e ative o badudp nas configurações 🥳!"
+echo "Vá para o menu e ative o badudp nas configurações!"
 sleep 3
+#rm -rf ~/badvpn
+rm $HOME/badvpn && cat /dev/null > ~/.bash_history && history -c
 # ##########################################################
 # Fim do script
 # ##########################################################
