@@ -1,5 +1,4 @@
-#!/bin/bash
-clear
+#!/bin/bash 
 fun_prog ()
 {
 	comando[0]="$1" 

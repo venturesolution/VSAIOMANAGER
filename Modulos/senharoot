@@ -1,5 +1,7 @@
-#!/bin/bash
-
+#!/bin/bash 
+echo -e "\033[0;34m╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮\033[0m"
+echo -e "\033[0;34m┃\E[44;1;37m            ALTERAR SENHA ROOT           \E[0m\033[0;34m┃"
+echo -e "\033[0;34m╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯\033[0m\n"
 echo -e "\033[1;31mATENCAO!!\033[0m"
 echo " "
 echo -e "\033[1;33mEssa senha sera usada para entrar no seu servidor

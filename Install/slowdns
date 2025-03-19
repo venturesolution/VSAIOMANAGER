@@ -1,10 +1,5 @@
 #!/bin/bash
 clear
-#——————————————————
-# CRIADOR POR @CRAZY_VPN
-# VERSAO 1.0
-# SLOW DNS TUNNEL
-#——————————————————
 
 RED='\033[1;31m'
 GREEN='\033[1;32m'
@@ -29,7 +24,7 @@ echo -e "${RED}$banner${SCOLOR}"
     chmod +x $PREFIX/bin/slowdns
     [[ $(grep -c 'slowdns' $PREFIX/etc/profile) == '0' ]] && echo 'slowdns' >> $PREFIX/etc/profile
     echo -e "\n${GREEN}BAIXANDO O SCRIPT POR FAVOR AGUARDE ! ${SCOLOR}"
-    curl -O https://sshplus.net/scripts/dns > /dev/null 2>&1
+    curl -O https://github.com/VENHABRABO/SSHPLUS-NEW/mainSlowdns/dns > /dev/null 2>&1
     echo -e "\n${RED}[${YELLOW}!${RED}] ${YELLOW}SCRIPT BAIXADO ! DA PROXIMA VEZ\nEXECULTE APENAS O COMANDO ${RED}(${GREEN}slowdns${RED})\n${YELLOW}MESMO QUE VOCÊ ESTEJA OFFLINE !${SCOLOR}"
     chmod +x dns
 }
@@ -62,8 +57,12 @@ echo -e "${RED}$banner${SCOLOR}"
         chave=$(sed -n 2p $HOME/credenciais)
     }
 }
+dns=$3
+[[ -z "$dns" ]] && {
+    dns='187.50.250.115'
+}
 echo -ne "\n${RED}[${YELLOW}!${RED}] ${YELLOW}PARA CONTINUAR CERTIFIQUE-SE DE\nESTÁ APENAS COM OS ${RED}(${YELLOW}DADOS MOVEIS${RED})\n${YELLOW}ATIVADO ${GREEN}ENTER ${YELLOW}PARA CONTINUAR.. ${SCOLOR}"; read
-$HOME/dns -udp 187.50.250.115:53 -pubkey ${chave} ${ns} 127.0.0.1:2222 > /dev/null 2>&1 &
+$HOME/dns -udp ${dns}:53 -pubkey ${chave} ${ns} 127.0.0.1:2222 > /dev/null 2>&1 &
 echo -e "\n${RED}[${GREEN}√${RED}]${SCOLOR} - ${GREEN}SLOWDNS INICIADO!${SCOLOR} - ${RED}[${GREEN}√${RED}]\n\n${RED}[${YELLOW}!${RED}] ${YELLOW}AGORA CONECTE-SE EM UM APP VPN\nOU CLICK EM ${GREEN}ENTER ${RED}PARA DESCONECTAR ${SCOLOR}"; read
 piddns=$(ps x| grep -w 'dns' | grep -v 'grep'| awk -F' ' {'print $1'})
 [[ ${piddns} != '' ]] && kill ${piddns} > /dev/null 2>&1

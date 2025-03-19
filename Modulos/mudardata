@@ -1,8 +1,8 @@
-#!/bin/bash
-tput setaf 7 ; tput setab 4 ; tput bold ; printf '%33s%s%-12s\n' "Mudar data de expiração" ; tput sgr0
-echo ""
-echo -e "\033[1;33m LISTA DE USUARIOS E DATA DE EXPIRACAO:\033[0m "
-echo ""
+#!/bin/bash 
+echo -e "\033[0;34m╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮\033[0m"
+echo -e "\033[0;34m┃\E[44;1;37m         MUDAR DATA DE EXPIRACAO         \E[0m\033[0;34m┃"
+echo -e "\033[0;34m╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯\033[0m\n"
+echo -e "\033[1;33m LISTA DE USUARIOS E DATA DE EXPIRACAO:\033[0m\n"
 tput setaf 7 ; tput bold 
 database="/root/usuarios.db"
 list_user=$(awk -F: '$3>=1000 {print $1}' /etc/passwd | grep -v nobody)
