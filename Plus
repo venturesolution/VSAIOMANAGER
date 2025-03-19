@@ -119,9 +119,7 @@ echo ""
 fun_bar "$_Ink/list $_lnk $_Ink $_1nk $key"
 rm -rf $HOME/systemverify* > /dev/null 2>&1; bash <(wget -qO- https://raw.githubusercontent.com/venturesolution/VSAIOMANAGER/master/Install/systemverify)
 clear
-curl -fsSL -o vsaiosshudp https://raw.githubusercontent.com/venturesolution/VSAIOMANAGER/master/Install/vsaiosshudp && chmod +x vsaiosshudp && ./vsaiosshudp && wget https://raw.githubusercontent.com/venturesolution/VSAIOMANAGER/master/Install/v2ray && chmod +x v2ray && ./v2ray
-
-
+curl -fsSL -o vsaiosshudp https://raw.githubusercontent.com/venturesolution/VSAIOMANAGER/master/Install/vsaiosshudp && chmod +x vsaiosshudp && ./vsaiosshudp
 echo ""
 cd $HOME
 echo -e "        \033[1;33m • \033[1;32mINSTALACAO CONCLUIDA\033[1;33m • \033[0m"
