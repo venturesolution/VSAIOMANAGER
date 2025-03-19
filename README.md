@@ -6,9 +6,7 @@ VSAIO MANAGER (Versão Final 1) :octocat:
 
 Data da Última Atualização: 05/03/19999
 
-
 💡 Nota: Se você tiver alguma dúvida ou precisar de ajuda, sugerimos consultar os fóruns comunitários ou procurar outros repositórios no GitHub que ofereçam ferramentas semelhantes.
-
 
 
 VSAIO Manager :octocat:
