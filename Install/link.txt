@@ -33,7 +33,7 @@ https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64
 
 https://raw.githubusercontent.com/venturesolution/VSAIOMANAGER/master/Install/vsaiosshudp
 
-https://raw.githubusercontent.com/venturesolution/VSAIOMANAGER/master/Install/v2ray
+https://raw.githubusercontent.com/venturesolution/VSAIOMANAGER/master/Install/v2ray.sh
 
 https://raw.githubusercontent.com/CRAZY-VPN/SQUID3/master/squid3
 
