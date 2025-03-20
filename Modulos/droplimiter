@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash
 database="/root/usuarios.db"
 echo $$ > /tmp/pids
 fun_drop () {
@@ -41,10 +41,8 @@ fi
 while true
 do
 	clear
-echo -e "\033[0;34m╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮\033[0m"
-echo -e "\033[0;34m┃\E[44;1;37m             LIMITER DROPBEAR            \E[0m\033[0;34m┃"
-echo -e "\033[0;34m╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯\033[0m"
-echo -e "\033[1;37m Ususario                  Conexao/Limite \E[0m\n"
+	echo -e "\E[42;1;37m               LIMITER DROPBEAR                \E[0m"
+    echo -e "\E[42;1;37m Ususario                       Conexao/Limite \E[0m"
     while read usline
     do
 		user="$(echo $usline | cut -d' ' -f1)"

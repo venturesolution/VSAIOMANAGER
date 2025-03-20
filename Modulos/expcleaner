@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash
 datenow=$(date +%s)
 remove_ovp () {
 if [[ -e /etc/debian_version ]]; then
@@ -17,9 +17,8 @@ chown nobody:$GROUPNAME /etc/openvpn/crl.pem
 [[ -e $HOME/$user.ovpn ]] && rm $HOME/$user.ovpn > /dev/null 2>&1
 [[ -e /var/www/html/openvpn/$user.zip ]] && rm /var/www/html/openvpn/$user.zip > /dev/null 2>&1
 } > /dev/null 2>&1
-echo -e "\033[0;34m╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮\033[0m"
-echo -e "\033[0;34m┃\E[44;1;37m USUARIO         DATA          ESTADO       ACAO  \E[0m\033[0;34m┃"
-echo -e "\033[0;34m╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯\033[0m\n"
+echo -e "\E[44;1;37m Usuario          Data         Estado         Ação   \E[0m"
+echo ""
 for user in $(awk -F: '{print $1}' /etc/passwd); do
 	expdate=$(chage -l $user|awk -F: '/Account expires/{print $2}')
 	echo $expdate|grep -q never && continue

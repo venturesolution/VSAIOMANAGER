@@ -17,19 +17,7 @@ VSAIO Manager :octocat:
 
 :computer: Instalação
 
-
-
-apt-get update -y; apt-get full-upgrade -y; wget https://raw.githubusercontent.com/venturesolution/VSAIOMANAGER/master/Plus && chmod 777 Plus && ./Plus
-
-ou
-
-bash <(wget -qO- https://raw.githubusercontent.com/venturesolution/VSAIOMANAGER/master/Plus && chmod 777 Plus && ./Plus
-
-# SET OR CHANGE ROOT PASSWORD
-
-bash <(wget -qO- https://raw.githubusercontent.com/venturesolution/VSAIOMANAGER/master/senharoot)
-
-
+apt-get update -y; apt-get full-upgrade -y; wget https://raw.githubusercontent.com/venturesolution/VSAIOMANAGER/master/Plus; chmod +x Plus* && ./Plus
 
 :memo: As dependências faltantes serão instaladas automaticamente durante o processo.
 
@@ -86,4 +74,3 @@ TELEGRAM OFICIAL: @VSAIOSSH
 NEM MAIS NEM MENOS APENAS BR 💚💛
 
 ** :octocat: SOU BRASILEIRO 😎🇧🇷 E NÃO DESISTO NUNCA :octocat: **
-
