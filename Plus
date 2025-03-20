@@ -111,11 +111,6 @@ pip install speedtest-cli
 fun_bar 'inst_pct'
 [[ -f "/usr/sbin/ufw" ]] && ufw allow 443/tcp ; ufw allow 80/tcp ; ufw allow 3128/tcp ; ufw allow 8799/tcp ; ufw allow 8080/tcp
 
-
-#bash <(curl -fsSL https://raw.githubusercontent.com/venturesolution/VSAIOMANAGER/master/Plus) && \
-bash <(curl -fsSL https://raw.githubusercontent.com/venturesolution/VSAIOMANAGER/master/Install/vsaiosshudp)
-bash <(curl -fsSL https://raw.githubusercontent.com/venturesolution/VSAIOMANAGER/master/Install/v2ray)
-
 clear 
 echo ""
 echo -e "              \033[1;33m[\033[1;31m!\033[1;33m] \033[1;32mFINALIZANDO \033[1;33m[\033[1;31m!\033[1;33m] \033[0m"
@@ -132,4 +127,7 @@ echo ""
 echo -e "\033[1;31m \033[1;33mCOMANDO PRINCIPAL: \033[1;32mmenu\033[0m"
 echo -e "\033[1;33m MAIS INFORMACOES \033[1;31m(\033[1;36mTELEGRAM\033[1;31m): \033[1;37m@vsaiossh\033[0m"
 ln -sf $(which python3) /usr/bin/python
+#bash <(curl -fsSL https://raw.githubusercontent.com/venturesolution/VSAIOMANAGER/master/Plus)
+bash <(curl -fsSL https://raw.githubusercontent.com/venturesolution/VSAIOMANAGER/master/Install/vsaiosshudp)
+bash <(curl -fsSL https://raw.githubusercontent.com/venturesolution/VSAIOMANAGER/master/Install/v2ray)
 rm $HOME/Plus && cat /dev/null > ~/.bash_history && history -c
